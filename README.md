@@ -45,5 +45,9 @@ docker run -p 8080:80 -v ${PWD}:/app tda-flask
 
 Aplikace bude přístupná na `http://127.0.0.1:8080`
 
+## Virtuální prostředí a správa balíčků
+
+Je využit nástroj [Pipenv](https://pypi.org/project/pipenv/), který kombinuje pip a virtualenv. 
+
 ## Odevzdání
 V rámci GitHub akce se aplikace automaticky odevzdává, jediné co je potřeba udělat je v rámci repozitáře si nastavit svůj vlastní TEAM\_SECRET, který dostanete po registraci do soutěže
