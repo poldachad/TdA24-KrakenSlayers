@@ -20,29 +20,7 @@ db.init_app(app)
 
 @app.route('/')
 def hello_world():  # put application's code here
-    db_conn = db.get_db()
-    items = db_conn.execute(
-        ' SELECT id, name '
-        ' FROM record '
-        ' ORDER BY id DESC ').fetchall()
-    result = ""
-    for item in items:
-        result += item["name"] + "\n"
-
-    return result
-
-
-@app.route('/save')
-def save():
-    db_conn = db.get_db()
-
-    db_conn.execute(
-        'INSERT INTO record (name) '
-        'VALUES (?) ',
-        'D'
-    )
-    db_conn.commit()
-    return 'Record saved'
+    return "Hello Tour de App!"
 
 
 if __name__ == '__main__':
