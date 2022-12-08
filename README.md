@@ -7,11 +7,11 @@
 ### Python
 
 #### Prerekvizity
-- Python 3 (pokud nemáš python nainstalovaný, podívej se na https://naucse.python.cz/course/pyladies/)
-- pipenv (odkaz na jak přidat pipenv na windows, `pip install --user pipenv` pro Windows, https://pypi.org/project/pipenv/#installation pro Linux dle distribuce) 
+- Python 3 (pokud nemáš python nainstalovaný, podívej se na https://naucse.python.cz/course/pyladies/),
+- pipenv ( `pip install --user pipenv` pro Windows, https://pypi.org/project/pipenv/#installation pro Linux dle distribuce).
+(Pokud se při instalaci na Windows vyskytla [chyba s proměnnou PATH](PATH%20warning.md).)
+
 #### Spuštění
-
-
 ```
 pipenv install
 pipenv shell
@@ -22,7 +22,7 @@ Windows
 flask --app app\app.py init-db
 flask --app app\app.py run
 ````
-
+(`flask is not recognized as an internal or external command, operable program or batch file.` -> Nainstalujte Flask pomocí `pip install Flask`)
 
 Linux / macOS
 ````
@@ -31,10 +31,11 @@ flask --app app/app.py run
 ````
 Aplikace bude přístupná na `http://127.0.0.1:5000`
 
-### Docker 
+### Docker
 #### Prerekvizity
-- Docker
-- (Windows) aktivovaný wsl2 
+- Docker.
+- (Windows) aktivovaný wsl2.
+Návod zde: https://tourdeapp.cz/vzdelavaci-materialy/2738-instalace-dockeru-na-windows
 
 #### Spuštění
 ```
@@ -47,7 +48,7 @@ Aplikace bude přístupná na `http://127.0.0.1:8080`
 
 ## Virtuální prostředí a správa balíčků
 
-Je využit nástroj [Pipenv](https://pypi.org/project/pipenv/), který kombinuje pip a virtualenv. 
+Jak využít nástroj [Pipenv](https://pypi.org/project/pipenv/), který kombinuje pip a virtualenv. 
 
 ## Odevzdání
-V rámci GitHub akce se aplikace automaticky odevzdává, jediné co je potřeba udělat je v rámci repozitáře si nastavit svůj vlastní TEAM\_SECRET, který dostanete po registraci do soutěže
+V rámci GitHub akce se aplikace automaticky odevzdává, jediné co je potřeba udělat je v rámci repozitáře si nastavit svůj vlastní [TEAM\_SECRET](https://tourdeapp.cz/vzdelavaci-materialy/2736-sablony-lokalni-deployment-a-odevzdani#:~:text=3.-,Team%20Secret,-Jd%C4%9Bte%20do%20Settings), který dostanete po registraci do soutěže.
