@@ -21,7 +21,8 @@ jobs:
         with:
           context: ./
           tags: tda-flask:latest
-          platforms: linux/amd64,linux/arm64 # Specify the platforms here
+          platforms: linux/arm64 # Specify the platforms here
+          # platforms: linux/amd64,linux/arm64 # Specify the platforms here
           outputs: type=docker,dest=/tmp/tda-flask.tar
 
       - name: Upload to TdA
