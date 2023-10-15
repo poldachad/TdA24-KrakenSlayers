@@ -13,11 +13,15 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
 
-      - name: Build
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
+
+      - name: Build and push multi-platform images
         uses: docker/build-push-action@v3
         with:
           context: ./
           tags: tda-flask:latest
+          platforms: linux/amd64,linux/arm64 # Specify the platforms here
           outputs: type=docker,dest=/tmp/tda-flask.tar
 
       - name: Upload to TdA
