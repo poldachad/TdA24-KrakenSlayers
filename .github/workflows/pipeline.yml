@@ -21,7 +21,7 @@ jobs:
           outputs: type=docker,dest=/tmp/tda-flask.tar
 
       - name: Upload to TdA
-        uses: Tour-de-App/upload-app@tda-24
+        uses: Tour-de-App/upload-app@tda24
         with:
           team_secret: ${{ secrets.TEAM_SECRET }}
           image_name: tda-flask
