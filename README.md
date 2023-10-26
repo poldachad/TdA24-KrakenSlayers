@@ -1,6 +1,6 @@
 # Tour de App - Flask boiler plate
 
-Šablona pro vývoj aplikace pro Tour de App společně s vytvořením a nahráním výstupu
+Šablona pro vývoj aplikace pro Tour de App společně s vytvořením a nahráním výstupu.
 
 ## Lokální spuštění
 
