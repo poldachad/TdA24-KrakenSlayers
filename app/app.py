@@ -25,7 +25,7 @@ def hello_world():  # put application's code here
 @app.route('/api')
 def api():
     secret = {"secret": "The cake is a lie"}
-    return jsonify(secret_key)
+    return jsonify(secret)
 
 if __name__ == '__main__':
     app.run()
