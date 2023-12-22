@@ -2,7 +2,7 @@ import os
 from flask import Flask, jsonify, render_template
 from . import db
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static')
 
 app.config.from_mapping(
     DATABASE=os.path.join(app.instance_path, 'tourdeflask.sqlite')
