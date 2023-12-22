@@ -8,6 +8,13 @@
     <script src="https://cdn.jsdelivr.net/npm/less"></script>
 </head>
 <body>
-    <h1>Hello TdA</h1>
+    <header><p>Hello TdA</p></header>
+    <main>
+        <img src="{{ url_for('static', filename='images/LOGO_colour-white.svg') }}"/>
+        <p>Teacher digital Agency je mladá společnost zaměřená na vyhledávání špičkových odborníků z řad učitelů, lektorů a tutorů.
+        <br>
+        Sestavujeme exkluzivní databázi těchto specialistů, abychom mohli efektivně propojovat klienty s ideálními odborníky dle jejich přání a specifických potřeb. Vaše vzdělávání je u nás v dobrých rukou.</p>
+        <a><button onclick="window.location.href='/lecturer'">Prohlížej lektory</button></a>
+    </main>
 </body>
 </html>
