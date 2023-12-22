@@ -1,8 +1,8 @@
 # Spuštění
 
-## Zapni si Docker Desktop debílku
+### 1. Zapni si Docker Desktop debílku
 
-### No a potom jen stačí dát do terminálu v tom projektu toto: 
+### 2. No a potom jen stačí dát do terminálu v tom projektu toto: 
 
 ```
 docker build . -t tda-flask
