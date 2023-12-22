@@ -5,8 +5,7 @@ from . import db
 app = Flask(__name__)
 
 app.config.from_mapping(
-    DATABASE=os.path.join(app.instance_path, 'tourdeflask.sqlite'),
-    # TEMPLATE_FOLDER=os.path.join(os.path.dirname(os.path.abspath(__file__)), 'lecturer')
+    DATABASE=os.path.join(app.instance_path, 'tourdeflask.sqlite')
 )
 
 # ensure the instance folder exists
