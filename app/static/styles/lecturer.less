@@ -7,14 +7,112 @@
 @heading-font: 'Lalezar';
 @text-font: 'Open Sans';
 
-@sunglow: #FECB2E;
-@prussian_blue: #00384D;
-@sky_blue: #74C7D3;
+@sky_blue: #74C7D3; //primary
 @jet: #333333;
 @white: #FFFFFF;
+
+@prussian_blue: #00384D; //secondary
+@sunglow: #FECB2E; 
 
 html {
     background: @jet;
     height: 100%;
     font-family: @text-font, Arial, Helvetica, sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    color: @white;
+    height: 100%;
+}
+
+header {
+    text-align: left;
+    height: 16%;
+    padding: 0 45px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    h1 {
+        color: @sky_blue;
+        font-family: @heading-font;
+        font-size: 64px;
+        margin: 0;
+        padding: 15px 0 0 0;
+    }
+
+    p {
+        color: @sunglow;
+        margin: 0;
+        font-size: 12px;
+        transform: translateY(-20px);
+    }
+
+    img {
+        width: 128px;
+        cursor: pointer;
+    }
+}
+
+main {
+    width: 100%;
+    height: 80%;
+
+    #primary {
+        width: 75%;
+        height: 50%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 300px;
+            height: 300px;
+        }
+
+        .text {
+            display: inline-block;
+            margin-left: 25px;
+
+            .name {
+                font-family: @heading-font;
+                font-size: 38px;
+            }
+
+            ul {
+                padding: 0;
+                margin: 0;
+            }
+
+            .tag {
+                display: inline-block;
+                border: @sunglow 1px solid;
+                padding: 7px 10px;
+                border-radius: 15px;
+                background: @prussian_blue;
+                margin: 10px 5px 0 0;
+            }
+        }
+    }
+
+    #secondary {
+        width: 75%;
+        height: 50%;
+        margin: auto;
+    }
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    color: @sky_blue;
+    width: 100%;
+    height: 4%;
+    text-align: center;
+    
+    p {
+        margin: 0;
+    }
 }

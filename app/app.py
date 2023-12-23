@@ -1,6 +1,7 @@
 import os
-from flask import Flask, jsonify, render_template
+from flask import Flask, jsonify, render_template, url_for
 from . import db
+import json
 
 app = Flask(__name__, static_folder='static')
 
@@ -28,7 +29,10 @@ def api():
 
 @app.route('/lecturer')
 def lecturer_page():
-    return render_template('lecturer/index.html')
+    json_file_path = os.path.join(os.getcwd(), 'app', 'static', 'lecturer.json') # absolute path to the json file
+    with open(json_file_path) as json_file:
+        json_data = json.load(json_file)
+    return render_template('lecturer/index.html', lecturer = json_data)
 
 if __name__ == '__main__':
     app.run()
