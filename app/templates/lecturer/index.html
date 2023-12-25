@@ -40,7 +40,20 @@
             </span>
         </section>
         <section id="secondary">
-            <span class="price">Cena na hodinu: {{ lecturer.price_per_hour}} Kč</span>
+            <div class="text">
+                <span class="price">Cena na hodinu: {{ lecturer.price_per_hour}} Kč</span>
+                <div class="contact">
+                    <span>Telefonní čísla: </span>
+                    {% for phone in lecturer.contact.telephone_numbers %}
+                        <span>{{ phone }} ;</span>
+                    {% endfor %}
+                    <br/>
+                    <span>Emaily: </span>
+                    {% for email in lecturer.contact.emails %}
+                        <span>{{ email }} ;</span>
+                    {% endfor %}    
+                </div>
+            </div>
         </section>
     </main>
     <footer><p>TdA24 - KrakenSlayers</p></footer>
